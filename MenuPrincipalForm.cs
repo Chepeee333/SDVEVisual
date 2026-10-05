@@ -1,6 +1,13 @@
 namespace SDVE;
 
-/// <summary>Formulario principal: desde aquí se abre cada módulo en su propio formulario.</summary>
+/*
+ CONTEXTO GENERAL:
+ Este formulario es el menú principal del Sistema Digital de Votación Estudiantil (SDVE).
+ Desde aquí se abren las demás pantallas: Convocatorias y votante, Papeleta, Resultados y Exportar.
+ No tiene lógica de votación, solo sirve para navegar entre los formularios.
+ La papeleta solo se puede abrir si ya se eligieron convocatorias y se capturaron los datos del votante.
+*/
+
 public partial class MenuPrincipalForm : Form
 {
     public MenuPrincipalForm()
@@ -8,29 +15,44 @@ public partial class MenuPrincipalForm : Form
         InitializeComponent();
     }
 
+    // Botón para abrir la pantalla de convocatorias y votante
     private void btnConvocatorias_Click(object? sender, EventArgs e)
     {
-        using var f = new ConvocatoriasForm();
-        f.ShowDialog(this);
+        ConvocatoriasForm frm = new ConvocatoriasForm();
+        frm.ShowDialog();
     }
 
+    // Botón para abrir la papeleta (solo si ya hay votante y convocatorias)
     private void btnPapeleta_Click(object? sender, EventArgs e)
     {
-        using var f = new PapeletaForm(Datos.Candidatos.Keys.ToList());
-        f.ShowDialog(this);
+        if (Datos.VotanteActual == null || Datos.ConvocatoriasSeleccionadas.Count == 0)
+        {
+            MessageBox.Show("Primero entra a 'Convocatorias y votante' para elegir las convocatorias y capturar tus datos.",
+                "Papeleta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+        }
+
+        PapeletaForm frm = new PapeletaForm();
+        frm.ShowDialog();
     }
 
+    // Botón para abrir los resultados
     private void btnResultados_Click(object? sender, EventArgs e)
     {
-        using var f = new ResultadosForm();
-        f.ShowDialog(this);
+        ResultadosForm frm = new ResultadosForm();
+        frm.ShowDialog();
     }
 
+    // Botón para abrir la exportación
     private void btnExportar_Click(object? sender, EventArgs e)
     {
-        using var f = new ExportarForm();
-        f.ShowDialog(this);
+        ExportarForm frm = new ExportarForm();
+        frm.ShowDialog();
     }
 
-    private void btnSalir_Click(object? sender, EventArgs e) => Close();
+    // Botón para salir del programa
+    private void btnSalir_Click(object? sender, EventArgs e)
+    {
+        Close();
+    }
 }
