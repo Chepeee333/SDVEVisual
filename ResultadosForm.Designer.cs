@@ -47,9 +47,9 @@ partial class ResultadosForm
         panelHeader.SuspendLayout();
         tablaResumen.SuspendLayout();
         SuspendLayout();
-        //
+        // 
         // split
-        //
+        // 
         split.Dock = DockStyle.Fill;
         split.Location = new Point(0, 115);
         split.Name = "split";
@@ -58,9 +58,9 @@ partial class ResultadosForm
         split.Size = new Size(1084, 465);
         split.SplitterDistance = 560;
         split.TabIndex = 0;
-        //
+        // 
         // grid
-        //
+        // 
         grid.AllowUserToAddRows = false;
         grid.AllowUserToDeleteRows = false;
         grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -73,39 +73,39 @@ partial class ResultadosForm
         grid.RowHeadersVisible = false;
         grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         grid.TabIndex = 0;
-        //
+        // 
         // colSegmento
-        //
+        // 
         colSegmento.HeaderText = "Segmento";
         colSegmento.Name = "colSegmento";
         colSegmento.ReadOnly = true;
-        //
+        // 
         // colPadron
-        //
+        // 
         colPadron.HeaderText = "Padrón";
         colPadron.Name = "colPadron";
         colPadron.ReadOnly = true;
-        //
+        // 
         // colVotos
-        //
+        // 
         colVotos.HeaderText = "Votos";
         colVotos.Name = "colVotos";
         colVotos.ReadOnly = true;
-        //
+        // 
         // colParticipacion
-        //
+        // 
         colParticipacion.HeaderText = "Participación %";
         colParticipacion.Name = "colParticipacion";
         colParticipacion.ReadOnly = true;
-        //
+        // 
         // colAbstencion
-        //
+        // 
         colAbstencion.HeaderText = "Abstención %";
         colAbstencion.Name = "colAbstencion";
         colAbstencion.ReadOnly = true;
-        //
+        // 
         // panelGrafica
-        //
+        // 
         panelGrafica.BackColor = Color.White;
         panelGrafica.Dock = DockStyle.Fill;
         panelGrafica.Location = new Point(0, 0);
@@ -113,9 +113,9 @@ partial class ResultadosForm
         panelGrafica.TabIndex = 0;
         panelGrafica.Paint += panelGrafica_Paint;
         panelGrafica.Resize += panelGrafica_Resize;
-        //
+        // 
         // panelFiltros
-        //
+        // 
         panelFiltros.Controls.Add(lblConvocatoria);
         panelFiltros.Controls.Add(cmbConvocatoria);
         panelFiltros.Controls.Add(lblAgrupar);
@@ -127,51 +127,51 @@ partial class ResultadosForm
         panelFiltros.Padding = new Padding(10, 12, 0, 0);
         panelFiltros.Size = new Size(1084, 55);
         panelFiltros.TabIndex = 1;
-        //
+        // 
         // lblConvocatoria
-        //
+        // 
         lblConvocatoria.AutoSize = true;
         lblConvocatoria.Margin = new Padding(3, 6, 3, 0);
         lblConvocatoria.Name = "lblConvocatoria";
         lblConvocatoria.TabIndex = 0;
         lblConvocatoria.Text = "Convocatoria:";
-        //
+        // 
         // cmbConvocatoria
-        //
+        // 
         cmbConvocatoria.DropDownStyle = ComboBoxStyle.DropDownList;
         cmbConvocatoria.FormattingEnabled = true;
         cmbConvocatoria.Name = "cmbConvocatoria";
         cmbConvocatoria.Size = new Size(210, 25);
         cmbConvocatoria.TabIndex = 1;
-        //
+        // 
         // lblAgrupar
-        //
+        // 
         lblAgrupar.AutoSize = true;
         lblAgrupar.Margin = new Padding(20, 6, 3, 0);
         lblAgrupar.Name = "lblAgrupar";
         lblAgrupar.TabIndex = 2;
         lblAgrupar.Text = "Agrupar por:";
-        //
+        // 
         // cmbAgrupar
-        //
+        // 
         cmbAgrupar.DropDownStyle = ComboBoxStyle.DropDownList;
         cmbAgrupar.FormattingEnabled = true;
         cmbAgrupar.Items.AddRange(new object[] { "Grupo", "Carrera", "Centro Universitario" });
         cmbAgrupar.Name = "cmbAgrupar";
         cmbAgrupar.Size = new Size(170, 25);
         cmbAgrupar.TabIndex = 3;
-        //
+        // 
         // btnActualizar
-        //
+        // 
         btnActualizar.Margin = new Padding(20, 0, 0, 0);
         btnActualizar.Name = "btnActualizar";
         btnActualizar.Size = new Size(120, 30);
         btnActualizar.TabIndex = 4;
         btnActualizar.Text = "🔄 Actualizar";
         btnActualizar.UseVisualStyleBackColor = true;
-        //
+        // 
         // panelHeader
-        //
+        // 
         panelHeader.BackColor = Color.FromArgb(30, 60, 114);
         panelHeader.Controls.Add(lblTitulo);
         panelHeader.Dock = DockStyle.Top;
@@ -179,9 +179,9 @@ partial class ResultadosForm
         panelHeader.Name = "panelHeader";
         panelHeader.Size = new Size(1084, 60);
         panelHeader.TabIndex = 2;
-        //
+        // 
         // lblTitulo
-        //
+        // 
         lblTitulo.AutoSize = true;
         lblTitulo.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
         lblTitulo.ForeColor = Color.White;
@@ -189,9 +189,9 @@ partial class ResultadosForm
         lblTitulo.Name = "lblTitulo";
         lblTitulo.TabIndex = 0;
         lblTitulo.Text = "📊  Resultados y participación";
-        //
+        // 
         // tablaResumen
-        //
+        // 
         tablaResumen.ColumnCount = 4;
         tablaResumen.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
         tablaResumen.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
@@ -209,9 +209,9 @@ partial class ResultadosForm
         tablaResumen.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
         tablaResumen.Size = new Size(1084, 80);
         tablaResumen.TabIndex = 3;
-        //
+        // 
         // lblPadron
-        //
+        // 
         lblPadron.BackColor = Color.FromArgb(235, 240, 250);
         lblPadron.Dock = DockStyle.Fill;
         lblPadron.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
@@ -220,9 +220,9 @@ partial class ResultadosForm
         lblPadron.TabIndex = 0;
         lblPadron.Text = "Padrón total\n1,200";
         lblPadron.TextAlign = ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblVotos
-        //
+        // 
         lblVotos.BackColor = Color.FromArgb(235, 240, 250);
         lblVotos.Dock = DockStyle.Fill;
         lblVotos.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
@@ -231,9 +231,9 @@ partial class ResultadosForm
         lblVotos.TabIndex = 1;
         lblVotos.Text = "Votos emitidos\n846";
         lblVotos.TextAlign = ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblParticipacion
-        //
+        // 
         lblParticipacion.BackColor = Color.FromArgb(235, 240, 250);
         lblParticipacion.Dock = DockStyle.Fill;
         lblParticipacion.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
@@ -242,9 +242,9 @@ partial class ResultadosForm
         lblParticipacion.TabIndex = 2;
         lblParticipacion.Text = "Participación\n70.5 %";
         lblParticipacion.TextAlign = ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblAbstencion
-        //
+        // 
         lblAbstencion.BackColor = Color.FromArgb(235, 240, 250);
         lblAbstencion.Dock = DockStyle.Fill;
         lblAbstencion.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
@@ -253,9 +253,9 @@ partial class ResultadosForm
         lblAbstencion.TabIndex = 3;
         lblAbstencion.Text = "Abstencionismo\n29.5 %";
         lblAbstencion.TextAlign = ContentAlignment.MiddleCenter;
-        //
+        // 
         // ResultadosForm
-        //
+        // 
         AutoScaleDimensions = new SizeF(96F, 96F);
         AutoScaleMode = AutoScaleMode.Dpi;
         ClientSize = new Size(1084, 660);
